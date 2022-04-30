@@ -37,7 +37,7 @@ function NavBar() {
 
         return (
             <div>
-                <nav className="navbar navbar-expand-lg navbar-light bg-dark" >
+                 <nav className="navbar navbar-expand-lg navbar-light" style={{ height: 70 }}>
                     <Nav.Item>
                     <Nav.Link className="navbar-brand NavItem text-info bg-dark font-monospace" href="/LoginNew">MedFine</Nav.Link>
                     </Nav.Item>
@@ -55,7 +55,7 @@ function NavBar() {
                     <Navbar.Collapse className="justify-content-end">
                         <NavItem>
                             <Nav className="ms-auto">
-                                <NavDropdown className="loginbtn navbar-brand NavItem text-info bg-dark font-monospace" title={firstName}>
+                                <NavDropdown className="loginbtn navbar-brand NavItem text-primary text-info font-monospace" title={firstName}>
                                     <NavDropdown.Item onClick={logOut}>Logout</NavDropdown.Item>
                                     <NavDropdown.Item onClick={Profile}>Profile</NavDropdown.Item>
                                 </NavDropdown>
@@ -85,11 +85,9 @@ function NavBar() {
     }
 
     if (!getJSON) {
-
         return (
             <div>
-
-                <nav className="navbar navbar-expand-lg navbar-light  ">
+                <nav className="navbar navbar-expand-lg navbar-light" style={{ height: 70 }}>
                     <Nav.Item>
                         <Nav.Link className="navbar-brand NavItem text-info bg-dark font-monospace" href="/LoginNew">MedFine</Nav.Link>
                     </Nav.Item>

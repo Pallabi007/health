@@ -43,7 +43,7 @@ function Search() {
                     <div className="col-md-6 mb-3 mt-3">
                         <input
                             type="text"
-                            className="form-control"
+                            className="form-control font-monospace"
                             placeholder="Enter Keyword"
                             onChange={(e) => {
                                 handlesearch(e);
@@ -52,40 +52,40 @@ function Search() {
                         <table className="table " >
                             <thead>
                                 <tr>
-                                    <th scope="col">Id</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Company</th>
-                                    <th scope="col">Price</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">ImageUrl</th>
-                                    <th scope="col">Uses</th>
-                                    <th scope="col">Expiry Date</th>                                   
+                                    <th className="font-monospace" scope="col">Id</th>
+                                    <th className="font-monospace" scope="col">Name</th>
+                                    <th className="font-monospace" scope="col">Company</th>
+                                    <th className="font-monospace" scope="col">Price</th>
+                                    <th className="font-monospace" scope="col">Quantity</th>
+                                    <th className="font-monospace" scope="col">ImageUrl</th>
+                                    <th className="font-monospace" scope="col">Uses</th>
+                                    <th className="font-monospace" scope="col">Expiry Date</th>                                   
                                 </tr>
                             </thead>
                             <tbody>
                                 {serachcountry.length > 1
                                     ? filterresult.map((filtercountry, index) => (
                                         <tr key={index}>
-                                            <td> {filtercountry.id} </td>
-                                            <td> {filtercountry.name} </td>
-                                            <td> {filtercountry.companyName} </td>
-                                            <td> {filtercountry.price} </td>
-                                            <td> {filtercountry.quantity} </td>
-                                            <td> {filtercountry.imageUrl} </td>
-                                            <td> {filtercountry.uses} </td>
-                                            <td> {filtercountry.expireDate}</td>
+                                            <td className="font-monospace"> {filtercountry.id} </td>
+                                            <td className="font-monospace"> {filtercountry.name} </td>
+                                            <td className="font-monospace"> {filtercountry.companyName} </td>
+                                            <td className="font-monospace"> {filtercountry.price} </td>
+                                            <td className="font-monospace"> {filtercountry.quantity} </td>
+                                            <td className="font-monospace"> {filtercountry.imageUrl} </td>
+                                            <td className="font-monospace"> {filtercountry.uses} </td>
+                                            <td className="font-monospace"> {filtercountry.expireDate}</td>
                                         </tr>
                                     ))
                                     : allcountry.map((getcon, index) => (
                                         <tr key={index}>
-                                            <td> {getcon.id} </td>
-                                            <td> {getcon.name} </td>
-                                            <td> {getcon.companyName} </td>
-                                            <td> {getcon.price} </td>
-                                            <td> {getcon.quantity} </td>
-                                            <td> {getcon.imageUrl} </td>
-                                            <td> {getcon.uses} </td>
-                                            <td> {getcon.expireDate}</td>
+                                            <td className="font-monospace"> {getcon.id} </td>
+                                            <td className="font-monospace"> {getcon.name} </td>
+                                            <td className="font-monospace"> {getcon.companyName} </td>
+                                            <td className="font-monospace"> {getcon.price} </td>
+                                            <td className="font-monospace"> {getcon.quantity} </td>
+                                            <td className="font-monospace"> {getcon.imageUrl} </td>
+                                            <td className="font-monospace"> {getcon.uses} </td>
+                                            <td className="font-monospace"> {getcon.expireDate}</td>
                                         </tr>
                                     ))}
                             </tbody>

@@ -4,6 +4,7 @@ import React, { useState, useEfect, Component } from 'react';
 import NavBar from '../../shared/nav-bar/NavBar';
 import HomePage from '../../HomePage/HomePage';
 import ListMedicine from '../../Medicines/list-medicine/ListMedicine';
+import { Badge, Container, FormControl, Nav, Navbar, NavItem, NavLink, Dropdown } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 
 
@@ -34,17 +35,13 @@ function LoginNew() {
     function GotoRegistration() {
         navigate("/Registration")
     }
-
-
-    let isAdminValue = false;
     let firstName = '';
+    let isAdminValue = '';
     const getJSON = localStorage.getItem('user');
     if (getJSON) {
         const user = JSON.parse(getJSON);
         firstName = user.firstName;
         isAdminValue = user.isAdmin;
-        console.log("firstName " + firstName);
-        console.log("isAdmin " + isAdminValue);
     }
 
     if (!getJSON) {
@@ -55,7 +52,7 @@ function LoginNew() {
                     <div className="container">
                         <div className='row'>
                             <div className='col-md-9'>
-                                <HomePage></HomePage>
+                                <HomePage />
                             </div>
                             <div className='col-md-3'>
                                 <form onSubmit={handlelogin}>
@@ -71,7 +68,7 @@ function LoginNew() {
                                     <input type="password" id="Password" onChange={(e) => setPassword(e.target.value)}
                                         name="Password" className="form-control font-monospace" required placeholder="Password" /><br />
 
-                                    <button type="submit" className="btn btn-primary font-monospace">Login</button>
+                                    <button type="submit" className="btn btn-primary font-monospace ">Login</button>
                                     <button type="button" onClick={GotoRegistration} className="btn btn-primary ms-auto font-monospace">SignUp</button>
 
                                 </form>
@@ -84,9 +81,9 @@ function LoginNew() {
     }
     if (getJSON) {
         return (
-            <ListMedicine></ListMedicine>
+            <ListMedicine />
         )
-    }    
+    }
 }
 
 export default LoginNew;

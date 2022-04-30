@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import "./CartItem.css";
 import CartContext from "../context/cart/CartContext";
-//import formatCurrency from "format-currency";
 
 const CartItem = ({ item }) => {
   const { removeItem } = useContext(CartContext);

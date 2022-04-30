@@ -55,67 +55,67 @@ function Useredit() {
                 <h6 data-testid="todo-1" className="text-center display-6 text-info bg-dark font-monospace">Edit Medicine</h6>
                 <form onSubmit={HandleUserupdate}>
                     <div className="mb-3">
-                        <label className="form-label">Name</label>
+                        <label className="form-label text-primary font-monospace">Name</label>
                         <input type="text"
                             name="name"
-                            className="form-control"
+                            className="form-control font-monospace"
                             value={useredit.name}
                             onChange={(e) => handleEdit(e)}
                         />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Company</label>
+                        <label className="form-label text-primary font-monospace">Company</label>
                         <input type="text"
                             name="company"
-                            className="form-control"
+                            className="form-control font-monospace"
                             value={useredit.company}
                             onChange={(e) => handleEdit(e)}
                         />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Price</label>
+                        <label className="form-label text-primary font-monospace">Price</label>
                         <input type="text"
                             name="price"
-                            className="form-control"
+                            className="form-control font-monospace"
                             value={useredit.price}
                             onChange={(e) => handleEdit(e)}
                         />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Quantity</label>
+                        <label className="form-label text-primary font-monospace">Quantity</label>
                         <input type="text"
                             name="quantity"
-                            className="form-control"
+                            className="form-control font-monospace"
                             value={useredit.quantity}
                             onChange={(e) => handleEdit(e)}
                         />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Image URL</label>
+                        <label className="form-label text-primary font-monospace">Image URL</label>
                         <input type="text" name="imageUrl"
-                            className="form-control"
+                            className="form-control font-monospace"
                             value={useredit.imageUrl}
                             onChange={(e) => handleEdit(e)}
                         />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Uses</label>
+                        <label className="form-label text-primary font-monospace">Uses</label>
                         <input type="text" name="uses"
-                            className="form-control"
+                            className="form-control font-monospace"
                             value={useredit.uses}
                             onChange={(e) => handleEdit(e)}
                         />
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Expiry Date</label>
+                        <label className="form-label text-primary font-monospace">Expiry Date</label>
                         <input type="text" name="expireDate"
-                            className="form-control"
+                            className="form-control font-monospace"
                             value={useredit.expireDate}
                             onChange={(e) => handleEdit(e)}
                         />
                     </div>
                     <div className="col-md-3">
-                        <button type="submit" className="btn btn-primary mt-4">
+                        <button type="submit" className="btn btn-primary mt-4 font-monospace">
                             Update
                         </button>
 

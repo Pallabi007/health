@@ -11,6 +11,13 @@ body {
     width: 400px;
     border: none
 }
+.margin-left{
+    margin-left: 80px !important;
+}
+
+.margin-right{
+    margin-left: 20px !important;
+}
 
 .btr {
     border-top-right-radius: 5px !important

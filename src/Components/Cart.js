@@ -1,13 +1,11 @@
 import { useContext } from "react";
 import "./Cart.css";
 import CartContext from "../context/cart/CartContext";
-//import formatCurrency from "format-currency";
 import CartItem from "./CartItem";
 
 const Cart = () => {
   const { showCart, cartItems, showHideCart } = useContext(CartContext);
-  //let opts = { format: "%s%v", symbol: "€" };
-
+ 
   return (
     <>
       {showCart && (
@@ -33,13 +31,7 @@ const Cart = () => {
           </div>
           <div className='Cart__cartTotal'>
             <div>Cart Total</div>
-            <div></div>
-            {/*<div style={{ marginLeft: 5 }}>
-              {formatCurrency(
-                cartItems.reduce((amount, item) => item.price + amount, 0),
-                opts
-              )}
-            </div>*/}
+            <div></div>            
             <div style={{ marginLeft: 5 }}>Rs  
               {(
                 cartItems.reduce((amount, item) => item.price + amount, 0)
